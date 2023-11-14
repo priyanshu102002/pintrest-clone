@@ -1,3 +1,6 @@
+This is a  pintrest-clone that allows users to register, login, and logout. It also allows users to view their profile page. 
+
+
 npx express-generator
 npm install
 
