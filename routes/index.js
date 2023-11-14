@@ -10,7 +10,7 @@ passport.authenticate(new localStrategy(usersModel.authenticate()));
 
 /* GET home page. */
 router.get("/", function (req, res, next) {
-    res.render("index", { title: "Express" });
+    res.render("index");
 });
 
 router.get("/profile", isLoggedIn, function (req, res) {
