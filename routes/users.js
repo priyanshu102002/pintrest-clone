@@ -11,7 +11,6 @@ const userSchema = new mongoose.Schema({
     },
     password: {
         type: String,
-        required: true,
     },
     // post id will come here and stored it in array
     posts: [

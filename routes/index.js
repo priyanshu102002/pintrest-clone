@@ -6,15 +6,23 @@ const usersModel = require("./users");
 const postsModel = require("./posts");
 
 const localStrategy = require("passport-local");
-passport.authenticate(new localStrategy(usersModel.authenticate()));
+passport.use(new localStrategy(usersModel.authenticate()));
 
 /* GET home page. */
 router.get("/", function (req, res, next) {
     res.render("index");
 });
 
+router.get("/login", function (req, res, next) {
+    res.render("login");
+});
+
+router.get("/feed",isLoggedIn , function (req, res, next) {
+    res.render("feed");
+});
+
 router.get("/profile", isLoggedIn, function (req, res) {
-    req.render("profile route");
+    res.render("profile");
 });
 
 // For Registering the new user and storing it in database
@@ -57,7 +65,7 @@ function isLoggedIn(req, res, next) {
     if (req.isAuthenticated()) {
         return next();
     }
-    res.redirect("/");
+    res.redirect("/login");
 }
 
 module.exports = router;
