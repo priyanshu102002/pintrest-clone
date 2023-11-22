@@ -125,3 +125,11 @@ hr {
     opacity: 0.4;
     margin-left: 25%;
 }
+
+.error{
+    color: red;
+    text-transform: capitalize;
+    font-weight: 500;
+    margin: 5px 0;
+    margin-left: -30px;
+}

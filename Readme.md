@@ -9,6 +9,15 @@ npx nodemon
 <!-- for authentication -->
 npm i passport passport-local passport-local-mongoose express-session 
 
+<!-- for flash(error message) -->
+npm i connect-flash
+
+<!-- for unique id -->
+npm i uuid
+
+<!-- for file upload -->
+npm i multer
+
 
 -------- router.methods -----
 GET : Display Home Page

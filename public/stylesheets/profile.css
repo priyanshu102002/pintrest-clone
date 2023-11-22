@@ -10,7 +10,13 @@ body {
     margin: 0 auto;
     padding: 20px 0;
 }
-
+.flex{
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    align-items: start;
+    
+}
 .cardr {
     background-color: #fff;
     border-radius: 5px;
@@ -63,3 +69,4 @@ body {
 .button:hover {
     background-color: rgb(219, 17, 17);
 }
+

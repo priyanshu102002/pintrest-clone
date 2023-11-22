@@ -16,6 +16,7 @@
                     class="img1"
                 />
                 <p class="header">Login my account</p>
+
                 <form action="/login" method="post">
                     <input
                         type="text"
@@ -29,6 +30,10 @@
                         placeholder="Password"
                         class="detail"
                     />
+                    <% if(error.length > 0){ %>
+                    <p class="error"><%= error %></p>
+                    <% } %>
+
                     <input
                         type="submit"
                         value="Login Account"
